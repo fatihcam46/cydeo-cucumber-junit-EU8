@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     /*   Creating a private constructor, so we are closing
-      access to the object of this class from outside the class
+      access to the object of this class from outside the class.
        */
     private Driver() {
     }
