@@ -27,6 +27,6 @@ Feature: Library app login feature
     And user enters admin password
     Then user should see the dashboard
 
-#this is how we add comments in feature file
+#this is how we add comments in feature file.
   #package com.cydeo.step_definitions; adding steps from here
   #if compile error wait and more actions and choose
