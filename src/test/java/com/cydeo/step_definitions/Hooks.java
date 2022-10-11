@@ -12,17 +12,17 @@ import org.openqa.selenium.*;
 
 public class Hooks {
     //import from io.cucumber.java not from junit
-   @Before (order = 1)  //second
+//   @Before (order = 1)  //second
     public void setupScenario(){
         System.out.println("====Setting up browser using cucumber @Before");
     }
 //two @Before or more than @Before is possible
-    @Before (value = "@login", order = 2) //i added login.feature @login//third
+//    @Before (value = "@login", order = 2) //i added login.feature @login//third
    public void setupScenarioForLogins(){
       System.out.println("====this will only apply to scenarios with @login tag");
    }
 
-  @Before (value = "@db", order = 0)  //@db  database scenario//order of @Before`s//first
+//  @Before (value = "@db", order = 0)  //@db  database scenario//order of @Before`s//first
   public void setupForDatabaseScenarios(){
        System.out.println("====this will only apply to scenarios with @db tag");
   }
@@ -32,7 +32,7 @@ public class Hooks {
     public void teardownScenario(Scenario scenario){
 //i want to take a screenshot after the scenario thats why teardownScenario
 // scenario.isFailed() --> if scenario fails this method will return TRUE boolean value
-        //if scenario failsthis will true
+        //if scenario fails this will true
       if (scenario.isFailed()){
 //starting to learn how screenshot?? downcast to TakesScreenshot , I allow to use
           byte [] screenshot = ((TakesScreenshot) com.cydeo.utilities.Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -48,12 +48,12 @@ public class Hooks {
         System.out.println("====Scenario ended/ Take screenshot if failed!");
     }
 
-    @BeforeStep
+//    @BeforeStep
    public void setupStep(){
       System.out.println("--------> applying setup using @BeforeStep");
    }
 
-    @AfterStep
+ //   @AfterStep
    public void afterStep(){
        System.out.println("--------> applying tearDown using @AfterStep");
     }
