@@ -30,7 +30,7 @@ public class Hooks {
 
     @After
     public void teardownScenario(Scenario scenario){
-//i want to take a screenshot after the scenario thats why teardownScenario
+//I want to take a screenshot after the scenario that's why teardownScenario
 // scenario.isFailed() --> if scenario fails this method will return TRUE boolean value
         //if scenario fails this will true
       if (scenario.isFailed()){

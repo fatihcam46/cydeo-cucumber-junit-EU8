@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        glue = "com/cydeo/step_definitions",//copy paste from runner class
+        glue = "com/cydeo/step_definitions",//copy and paste from runner class
         features = "@target/rerun.txt"      //target is rerun,txt
 )
 //it is running just failing things

@@ -9,19 +9,19 @@ Feature: Library app login feature
   Background: For the scenarios in the feature file, user is expected to be on login page
     Given user is on the library login page
 
-  @librarian @employee
+ # @librarian @employee
   Scenario: Login as librarian
     When user enters librarian username
     And user enters librarian password
     Then user should see the dashboard
 
-  @student @db  #@db : database
+ # @student @db  #@db : database
   Scenario: Login as student
     When user enters student username
     And user enters student password
     Then user should see the dashboard
 
-  @admin @employee
+#  @admin @employee
   Scenario: Login as admin
     When user enters admin username
     And user enters admin password
